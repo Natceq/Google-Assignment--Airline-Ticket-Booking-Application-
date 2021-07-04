@@ -1,5 +1,5 @@
 # Airline Ticket Booking Application
-This project was generated with revel version 1.0.0.
+   This project was generated with revel version 1.0.0.
 
 
 ## Requirements
@@ -9,6 +9,7 @@ This project was generated with revel version 1.0.0.
 * Typescript - https://www.typescriptlang.org/download
 * AngularJS - https://angularjs.org/
 * Visual Studio Code (IDE) - https://code.visualstudio.com/download 
+* Java JDK 1.8(Included in Ecplise) - https://www.oracle.com/sg/java/technologies/javase/javase-jdk8-downloads.html
 * Ecplise (Running Test Cases) - https://www.eclipse.org/downloads/
 
 ## Included Jar files
@@ -18,7 +19,7 @@ This project was generated with revel version 1.0.0.
 
 ## How to Start the Web Server:
 
-   revel run -a airlines
+    revel run -a airlines
 
 ## Go to http://localhost:9000/ and you'll see:
 
@@ -65,7 +66,7 @@ The directory structure of a generated Revel application:
 * [Help for AnuglarJS typings](https://www.npmjs.com/package/@types/angular)
 
 ### Command to compile typescript files 
-* tsc -w
+    tsc -w
 
 ## Testing
 * Download Ecplise and import airlinesTest into ecplise
