@@ -1,5 +1,5 @@
 # Airline Ticket Booking Application
-This project is done with 
+This project was generated with revel version 1.0.0.
 
 
 ### Start the web server:
@@ -8,7 +8,7 @@ This project is done with
 
 ### Go to http://localhost:9000/ and you'll see:
 
-    "It works"
+    The Login Page for the application.
 
 ## Code Layout
 
@@ -22,19 +22,20 @@ The directory structure of a generated Revel application:
         init.go       Interceptor registration
         controllers/  App controllers go here
         views/        Templates directory
-
+	
     messages/         Message files
 
-    public/           Public static assets
-        css/          CSS files
-        js/           Javascript files
-        images/       Image files
-	typescript/	  typescript Javascript files
+    public/           	Public static assets
+        css/          	CSS files
+        js/           	Javascript files
+        images/       	Image files
+	typescript	Typescript Javascript files
 
     tests/            Test suites
+    	airlineTest	Selenium Test Suite
+	
 
-
-## Help
+## Help For revel installation.
 
 * The [Getting Started with Revel](http://revel.github.io/tutorial/gettingstarted.html).
 * The [Revel guides](http://revel.github.io/manual/index.html).
