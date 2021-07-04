@@ -6,6 +6,7 @@
 * Go - https://golang.org/doc/install
 * Revel Go Web Framework - https://github.com/revel
 * MySQL - https://dev.mysql.com/downloads/installer/
+* NodeJS (For npm Installer) - https://nodejs.org/en/download/
 * Typescript - https://www.typescriptlang.org/download
 * AngularJS - https://angularjs.org/
 * Visual Studio Code (IDE) - https://code.visualstudio.com/download 
