@@ -1,11 +1,10 @@
-# Welcome to Revel
-
-A high-productivity web framework for the [Go language](http://www.golang.org/).
+# Airline Ticket Booking Application
+This project is done with 
 
 
 ### Start the web server:
 
-   revel run myapp
+   revel run -a airlines
 
 ### Go to http://localhost:9000/ and you'll see:
 
@@ -30,7 +29,7 @@ The directory structure of a generated Revel application:
         css/          CSS files
         js/           Javascript files
         images/       Image files
-		typescript/	  typescript Javascript files
+	typescript/	  typescript Javascript files
 
     tests/            Test suites
 
@@ -41,4 +40,5 @@ The directory structure of a generated Revel application:
 * The [Revel guides](http://revel.github.io/manual/index.html).
 * The [Revel sample apps](http://revel.github.io/examples/index.html).
 * The [API documentation](https://godoc.org/github.com/revel/revel).
+
 
