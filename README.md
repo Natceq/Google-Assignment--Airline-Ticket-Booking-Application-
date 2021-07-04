@@ -1,18 +1,30 @@
 # Airline Ticket Booking Application
 This project was generated with revel version 1.0.0.
 
-## Requirements
-###Golang Installtions
 
-### Start the web server:
+## Requirements
+* Go - https://golang.org/doc/install
+* Revel Go Web Framework - https://github.com/revel
+* MySQL - https://dev.mysql.com/downloads/installer/
+* Typescript - https://www.typescriptlang.org/download
+* AngularJS - https://angularjs.org/
+* Visual Studio Code (IDE) - https://code.visualstudio.com/download 
+* Ecplise (Running Test Cases) - https://www.eclipse.org/downloads/
+
+## Included Jar files
+* Selenium  - Located In \tests
+* AngularJS - Located In \public\js
+* Bootstrap - Located In \public\js
+
+## How to Start the Web Server:
 
    revel run -a airlines
 
-### Go to http://localhost:9000/ and you'll see:
+## Go to http://localhost:9000/ and you'll see:
 
     The Login Page for the application.
 
-## Code Layout
+## Layout
 
 The directory structure of a generated Revel application:
 
@@ -25,16 +37,19 @@ The directory structure of a generated Revel application:
         controllers/  App controllers go here
         views/        Templates directory
 	
+    app_data/	  MySQL Database Dump
+	
     messages/         Message files
 
-    public/           	Public static assets
-        css/          	CSS files
-        js/           	Javascript files
-        images/       	Image files
-	typescript/	Typescript Javascript files
+    public/           Public static assets
+            css/      CSS files
+             js/      Javascript files
+         images/      Image files
+     typescript/      Typescript Javascript files
 
     tests/            Test suites
-    	airlineTest/	Selenium Test Suite
+        airlineTest/  Selenium Test Suite
+        jar files/    Jar files for setting up Selenium
 	
 
 ## Help For revel installation.
@@ -44,4 +59,15 @@ The directory structure of a generated Revel application:
 * The [Revel sample apps](http://revel.github.io/examples/index.html).
 * The [API documentation](https://godoc.org/github.com/revel/revel).
 
+## Typescript
+### Install Typescript AngularJS typings
+* Go node_modules folder and type in the command : npm install --save @types/angular
+* [Help for AnuglarJS typings](https://www.npmjs.com/package/@types/angular)
 
+### Command to compile typescript files 
+* tsc -w
+
+## Testing
+* Download Ecplise and import airlinesTest into ecplise
+* Testing file is done with java 1.8
+* [Help with Ecplise project importing](https://dzone.com/articles/exporting-and-importing)
