@@ -1,6 +1,8 @@
 # Airline Ticket Booking Application
 This project was generated with revel version 1.0.0.
 
+## Requirements
+###Golang Installtions
 
 ### Start the web server:
 
@@ -29,10 +31,10 @@ The directory structure of a generated Revel application:
         css/          	CSS files
         js/           	Javascript files
         images/       	Image files
-	typescript	Typescript Javascript files
+	typescript/	Typescript Javascript files
 
     tests/            Test suites
-    	airlineTest	Selenium Test Suite
+    	airlineTest/	Selenium Test Suite
 	
 
 ## Help For revel installation.
