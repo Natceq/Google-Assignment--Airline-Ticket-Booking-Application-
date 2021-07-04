@@ -1,0 +1,34 @@
+{{set . "title" "Change Password"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+  <div class="container">
+    <div class="row">
+      <h2>Change Password</h2>
+      {{template "navheader.html" .}}
+    </div>
+  </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="span6">
+            <form class="form" role="form" name="custForm" id="custForm" method="POST" action ="{{ url "App.ChangePassPost"}}">
+                <div style = "margin: 10px 0;">
+                    <label for = "Password"> New Password  </label>
+                    <input type="password" id="Password" name="Password" minlength = "6" maxlength = "16" class="form-control" onkeyup="passwordCheck()" placeholder="Password" required>
+                </div>
+                <div style = "margin: 10px 0;">
+                    <label for = "cPassword"> Confirm new Password  </label>
+                    <input type="password" id="cPassword" name="cPassword" minlength = "6" maxlength = "16" class="form-control" onkeyup="passwordCheck()" placeholder="Confirm Password" required>
+                    <span id='passwordMsg'></span>
+                </div>
+                <div style = "margin: 20px 0;">
+                    <button class="btn btn-success btn-lg btn-block" id = "regSubmit" type="submit" disabled>Change Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/public/typescript/registerCheck.js"></script>
+{{template "footer.html" .}}

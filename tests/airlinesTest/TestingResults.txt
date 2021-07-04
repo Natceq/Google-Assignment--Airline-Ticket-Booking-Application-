@@ -1,0 +1,54 @@
+Register Test 1 (Empty all fields)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 2 (Empty email)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 3 (Empty pasword)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 3 (Empty confirm pasword)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 4 (Empty first name)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 5 (Empty last name)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 6 (Empty secret answer with first question)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 7 (Empty secret answer with different question)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 8 (short but matching password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 9 (not matching password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 10 (Wrong email format)  [NEGATIVE TESTCASE]   Results :  PASSED
+Register Test 11 (Positive Test Case)  [POSTIVE TESTCASE]   Results :  PASSED
+Register Test 12 (Email/username already exist in database)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 1 (Correct Username and Wrong password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 2 (Wrong Username and Correct password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 3 (Wrong Username and Wrong password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 4 (Empty Username and Correct password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 5 (Correct Username and Empty password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 6 (Empty Username and Empty password)  [NEGATIVE TESTCASE]   Results :  PASSED
+Login Test 7 (Correct Username and Correct password)  [POSTIVE TESTCASE]   Results :  PASSED
+Logout Test 1 (Correct Login credentials and logout)  [POSTIVE TESTCASE]   Results :  PASSED
+Route Test 1 (Access Dashboard page without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 2 (Access Booking page without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 3 (Access Transcation page without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 4 (change password page without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 5 (Access logout Request:(GET) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 6 (Access bookinglist Request:(GET) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 7 (Access booking Request:(POST) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 8 (Access reserveList Request:(GET) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 9 (Access reserve Request:(POST) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 10 (Access bookedlist Request:(GET) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Route Test 11 (Access ticketlist Request:(GET) without login)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 1 (all form fields for booking empty)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 2 (Testing with no search filters)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 3 (Booking without entering ticket number)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 4 (ticket number input 0)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 5 (ticket number input 500)  [NEGATIVE TESTCASE]   Results :  PASSED
+Booking Test 6 (Correct Booking Test with the correct form fields)  [POSTIVE TESTCASE]   Results :  PASSED
+Customer Has Reserved Login Test (Login after customer leaves after booking without payment)  [POSTIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 1 (empty field for all)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 2 (empty credit card number field)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 3 (Customer did not choose any ticket selection)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 4 (passport number field empty)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 5 (name field empty)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reseved Booking Test 6 (Correct flow with correct fields)  [POSTIVE TESTCASE]   Results :  PASSED
+Reserved Delete Test 1 (Dont select user choice and submit for delete)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reserved Delete Test 2 (Dont check delete checkbox and submit for delete)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reserved Delete Test 3 (Correct flow with user choice and checkbox click)  [POSTIVE TESTCASE]   Results :  PASSED
+Reset Password Test 1 (empty email field)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reset Password Test 2 (email address that does not exist in database)  [NEGATIVE TESTCASE]   Results :  PASSED
+Reset Password Test 3 (Correct email and password)  [POSTIVE TESTCASE]   Results :  PASSED
+Change Password Test 1 (empty password form field)  [NEGATIVE TESTCASE]   Results :  PASSED
+Change Password Test 1 (empty confirm password form field)  [NEGATIVE TESTCASE]   Results :  PASSED
+Change Password Test 1 (Correct email and password)  [POSTIVE TESTCASE]   Results :  PASSED

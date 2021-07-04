@@ -1,0 +1,80 @@
+{{set . "title" "Customer Dashboard"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+    <div class="container">
+      <div class="row">
+        <h2>Customer Dashboard</h2>
+        {{template "navheader.html" .}}
+      </div>
+    </div>
+  </header>
+<div class="container">
+    <div class="row">
+        <div class="span6">
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <h4>Completed Transcations</h4><br></br>
+                <table style = "width:100%">
+                <tr>
+                    <th>Airline Company</th>
+                    <th>Country</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Seats Booked</th>
+                    <th>CreditCard Num</th>
+                </tr>
+                <tbody ng-repeat = "i in flights">
+                    <tr>
+                    <td>{{`{{i.airlineName}}`}}</td>
+                    <td>{{`{{i.flyingTo}}`}}</td>
+                    <td>{{`{{i.bookingDate}}`}}</td>
+                    <td>{{`{{i.bookingTime}}`}}</td>
+                    <td>{{`{{i.ticketAmount}}`}}</td>
+                    <td>{{`{{i.creditCardNum}}`}}</td>
+                    </tr>
+                </tbody>
+                </table>
+                <br></br>
+                <h4>Booked Tickets</h4><br></br>
+                <table style = "width:100%">
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Airline Company</th>
+                    <th>Ticket Number</th>
+                    <th>Flight Number</th>
+                    <th>Country</th>
+                    <th>Passport Number</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Seats Number</th>
+                </tr>
+                <tbody ng-repeat = "i in tickets">
+                    <tr>
+                        <td>{{`{{i.custName}}`}}</td>
+                        <td>{{`{{i.airlineName}}`}}</td>
+                        <td>{{`{{i.ticketNum}}`}}</td>
+                        <td>{{`{{i.flightNumber}}`}}</td>
+                        <td>{{`{{i.flyingTo}}`}}</td>
+                        <td>{{`{{i.passportNum}}`}}</td>
+                        <td>{{`{{i.flightDate}}`}}</td>
+                        <td>{{`{{i.flightTime}}`}}</td>
+                        <td>{{`{{i.seatNumber}}`}}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <br></br>
+            <div class="form-group col-xs-12 text-center">
+                <p><a style="color:#00C1FF;" href="{{ url "App.Booking" }}"> Click Here to Ticket Booking Page</a></p>
+                <p><a style="color:#001aff;" href="{{ url "App.ViewReserved" }}"> Click Here to Reserved Page</a></p>
+            </div>
+            {{if .flash.success}}
+            <div class="card-footer bg-success text-center" id = "displaySuccess">
+            {{.flash.success}}
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+<script src="/public/typescript/displayBooking.js"></script>
+{{template "footer.html" .}}

@@ -1,0 +1,66 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+  <div class="container">
+    <div class="row">
+      <h2>Registration Page</h2>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+        <form class="form" role="form" name="custForm" id="custForm" method="POST" action ="{{ url "App.RegPost"}}">
+            <div style = "margin: 10px 0;">
+				        <label for = "inputEmail">Email Address  </label>
+                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Username/Email address" required>
+            </div>
+            <div style = "margin: 10px 0;">
+				        <label for = "Password"> Password  </label>
+                <input type="password" id="Password" name="Password" minlength = "6" maxlength = "16" class="form-control" onkeyup="passwordCheck()" placeholder="Password" required>
+            </div>
+			      <div style = "margin: 10px 0;">
+				        <label for = "cPassword"> Confirm Password  </label>
+                <input type="password" id="cPassword" name="cPassword" minlength = "6" maxlength = "16" class="form-control" onkeyup="passwordCheck()" placeholder="Confirm Password" required>
+                <span id='passwordMsg'></span>
+            </div>
+            <div style = "margin: 20px 0;">
+              <label for = "fname"> First name </label>
+              <input type = "text" id="fname" name="fname" class="form-control" placeholder="First Name" required>
+            </div>
+            <div style = "margin: 20px 0;">
+              <label for = "fname"> Last name </label>
+              <input type = "text" id="lname" name="lname" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div style = "margin: 20px 0;">
+              <label for = "sQuestion"> Secret Question </label>
+              <select id = "sQuestion" name = "sQuestion" class="form-control">
+               <option value = "GrandMother's name">GrandMother's name</option>
+               <option value = "GrandFather's name">GrandFather's name</option>
+              </select>
+            </div>
+            <div style = "margin: 20px 0;">
+              <label for = "answer"> Answer </label>
+              <input type = "text" id="answer" name="answer" class="form-control" minlength = "6" placeholder="Answer for secret question at least 6 characters long" required>
+            </div>
+            <div style = "margin: 20px 0;">
+                <button id ="regSubmit" class="btn btn-success btn-lg btn-block" type="submit" disabled>Submit</button>
+            </div>
+        </form>
+      <div class="form-group col-xs-12 text-center">
+        <p><a style="color:#00C1FF;" href="{{ url "App.Index" }}"> Return to login page</a></p>
+      </div>
+      {{if .flash.error}}
+      <div class="card-footer bg-danger text-center">
+      {{.flash.error}}
+      </div>
+      {{end}}
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/public/typescript/registerCheck.js"></script>
+{{template "footer.html" .}}

@@ -1,0 +1,49 @@
+{{set . "title" "Login Page"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+  <div class="container">
+    <div class="row">
+      <h2>Airlines Login Page</h2>
+      <p></p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="span6">
+        <form class="form" role="form" id="formLogin" method="POST">
+            <div style = "margin: 10px 0;">
+				<label for = "inputEmail">Email  </label>
+                <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            </div>
+            <div style = "margin: 10px 0;">
+				<label for = "password">password  </label>
+                <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <div style = "margin: 20px 0;">
+                <button class="btn btn-success btn-lg btn-block" id = "loginSubmit" type="submit">Sign in</button>
+            </div>
+        </form>
+      <div class="form-group col-xs-12 text-center">
+        <p><a style="color:#00C1FF;" href="{{ url "App.Registration" }}"> Create a new account</a></p>
+      </div> 
+      <div class="form-group col-xs-12 text-center">
+        <p><a style="color:#0004ff;" href="{{ url "App.ForgotPassword" }}"> Forgot your password?</a></p>
+      </div> 
+    </div>
+  </div>
+    {{if .flash.error}}
+      <div class="card-footer bg-danger text-center" id = "displayError">
+    {{.flash.error}}
+      </div>
+    {{end}}
+    {{if .flash.success}}
+      <div class="card-footer bg-success text-center" id = "displaySuccess">
+    {{.flash.success}}
+      </div>
+    {{end}}
+</div>
+
+{{template "footer.html" .}}

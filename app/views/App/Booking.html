@@ -1,0 +1,76 @@
+{{set . "title" "Book Airline Tickets"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+  <div class="container">
+    <div class="row">
+      <h2>Booking Form Page</h2>
+      {{template "navheader.html" .}}
+    </div>
+  </div>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="span6">
+        <div ng-app="myApp" ng-controller="myCtrl">
+          <h2>Search Options</h2>
+          <input type="text" class="form-control" id="myInput" onkeyup="searchAirlines()" placeholder="Search for Airline Name Or Date(YYYY-MM-DD) Or Country..">
+          <br></br>
+          <input type="text" class="form-control" id="myInputDate" onkeyup="searchDateCountry()" placeholder="YYYY-MM-DD">
+          <br></br>
+          <input type="text" class="form-control" id="myInputCountry" onkeyup="searchDateCountry()" placeholder="Search for Country name..">
+          <br></br>
+          <div id = "Hiddentable" style="display: none;">
+            <h2>Available Ticket Selections</h2><br></br>
+              <table style = "width:100%" id = "airlinesDisplay">
+                <tr>
+                  <th>Choice</th>
+                  <th>Airline Company</th>
+                  <th>Flight Number</th>
+                  <th>Country</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Seat Available</th>
+                  <th>Seat Taken</th>
+                  <th>Seat Reserved</th>
+                </tr>
+                <tbody ng-repeat = "i in flights">
+                  <tr>
+                    <td>{{`{{i.airlinesID}}`}}</td>
+                    <td>{{`{{i.nameAL}}`}}</td>
+                    <td>{{`{{i.flightNumber}}`}}</td>
+                    <td>{{`{{i.flyingTo}}`}}</td>
+                    <td>{{`{{i.flightDate}}`}}</td>
+                    <td>{{`{{i.flightTime}}`}}</td>
+                    <td>{{`{{i.numberOfSeat}}`}}</td>
+                    <td>{{`{{i.seatTaken}}`}}</td>
+                    <td>{{`{{i.reserved}}`}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            <form class="form" role="form" name="bookingForm" id="bookingForm" method="POST" action ="{{ url "App.BookingPost"}}">
+              <div style = "margin: 10px 0;">
+                <br></br>    
+                <p><b>Select Choice for flights</b></p>
+                <select name = "flightChoice" id = "flightChoice">
+                </select>
+              </div>
+              <div class="form-group">
+                <input id="seatNumber" class="form-control" type="number" name="seatNumber" placeholder="Enter Number of seats" min = "1"  max = "5" required/>
+              </div>
+            </div>
+            <div style = "margin: 20px 0;">
+                <button id ="bookingSubmit" class="btn btn-success btn-lg btn-block" type="submit" disabled>Buy Tickets</button>
+            </div>
+            </form>
+        </div>
+        {{if .flash.error}}
+        <div class="card-footer bg-danger text-center">
+        {{.flash.error}}
+          </div>
+        {{end}}
+      </div>
+    </div>
+</div>
+<script src="/public/typescript/getFlights.js"></script>
+{{template "footer.html" .}}

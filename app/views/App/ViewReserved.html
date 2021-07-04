@@ -1,0 +1,75 @@
+{{set . "title" "Reserved Bookings"}}
+{{template "header.html" .}}
+
+<header class="jumbotron" style="background-color:#99ff99">
+  <div class="container">
+    <div class="row">
+      <h2>Booking transcation confirmation</h2>
+      {{template "navheader.html" .}}
+    </div>
+  </div>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="span6">
+        <div ng-app="myAppRVS" ng-controller="myCtrlRVS">
+          <div>
+            <h4>Reserved Ticket</h4><br></br>
+            <table id = "displayFlights" name = "displayBooking" id = "displayBooking" style = "width:100%">
+              <tr>
+                <th>Choice</th>
+                <th>Airline Company</th>
+                <th>Flight Number</th>
+                <th>Country</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Seat Reserved</th>
+              </tr>
+              <tbody ng-repeat = "i in flights">
+                <tr>
+                  <td>{{`{{i.airlinesID}}`}}</td>
+                  <td>{{`{{i.airlineName}}`}}</td>
+                  <td>{{`{{i.flightNumber}}`}}</td>
+                  <td>{{`{{i.flyingTo}}`}}</td>
+                  <td>{{`{{i.bookingDate}}`}}</td>
+                  <td>{{`{{i.bookingTime}}`}}</td>
+                  <td>{{`{{i.ticketAmount}}`}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <form class="form" role="form" name="reserveForm" id="reserveForm" method="POST" action ="{{ url "App.BookingReservePost"}}">
+            <input type="hidden" id="formType" name="formType" value="Complete">
+            <input type="hidden" id="passportValues" name="passportValues" value ="none">
+            <input type="hidden" id="nameValues" name="nameValues" value ="none">
+            <div style = "margin: 10px 0;">    
+              <p><b>Select Choice for flights</b></p>
+              <select name = "flightChoice" id = "flightChoice" onchange="displayTextBox()">
+                <option value = "none">None</option>
+              </select>
+            </div>
+            <input type="checkbox" id="forDelete" name="forDelete1" onchange = "submitOrDelete()" value ="Submit">
+            <label for="forDelete1"> Tick if you want to delete this booking entry</label><br></br>
+            <div id = "inputBySeats" name = "inputBySeats">
+            </div>
+            <div style = "margin: 10px 0;">
+              <label for = "cardNum">Credit Card number </label>
+              <input type="text" id="cardNum" name="cardNum" class="form-control" placeholder="Credit Card number" minlength = "15" maxlength = "16" required>
+            </div>
+            <div style = "margin: 20px 0;">
+              <button id ="reservedSubmit" onclick = "window.formTypeValue()" class="btn btn-success btn-lg btn-block" type="submit" disabled>Complete Transcation & Book Tickets</button>
+              <button id ="reservedDelete" onclick = "window.updateFormType()" class="btn btn-lg btn-block" type="submit" style ="background-color: #af5b4c;" disabled>Delete Selected Entry</button>
+            </div>
+          </form>
+          
+        </div>
+        {{if .flash.error}}
+        <div class="card-footer bg-danger text-center">
+        {{.flash.error}}
+        </div>
+        {{end}}
+      </div>
+    </div>
+</div>
+<script src="/public/typescript/getReserved.js"></script>
+{{template "footer.html" .}}

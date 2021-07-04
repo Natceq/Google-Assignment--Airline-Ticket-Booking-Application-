@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.menu {
+	float: right;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+a:hover {
+  color: black;
+}
+
+div.back {
+	float: left;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color: #04AA6D;
+  	color: white;
+}
+
+</style>
+</head>
+<body>
+	<div class = "menu">
+		<div class="btn-group">
+		<button type="button" id = "custMenu" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  Customer Menu
+		</button>
+		<div class="dropdown-menu" style = "background-color: #e3fff3;">
+		  <a class="dropdown-item" id = "dashboardLink" href="{{ url "App.Dashboard" }}"><b>Dashboard</b></a>
+		  <div class="divider"></div>
+		  <a class="dropdown-item" id = "changePasswordLink" href="{{ url "App.ChangePass" }}"><b>Change Password</b></a>
+		  <div class="divider"></div>
+		  <a class="dropdown-item" id = "logout" href="{{ url "App.Logout" }}"><b>Logout</b></a>
+		</div>
+	  </div>
+	</div>
+</body>
+</html>
+<script>
+	function goBack() {
+	  window.history.back();
+	}
+</script>

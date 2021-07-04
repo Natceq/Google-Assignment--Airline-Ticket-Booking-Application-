@@ -1,0 +1,25 @@
+th 
+{
+    border: 1px solid black;
+    background-color: #1cce66;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+table 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+td 
+{
+    border: 1px solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
