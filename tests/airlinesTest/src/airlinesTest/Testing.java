@@ -324,6 +324,49 @@ public class Testing
 		passwordChange = "Change Password Test 3 (Correct email and password)  " + result;
 		testCollection.add(passwordChange);
 		
+		//End to end positive test case with a different account
+		String newUserEmail = "newuser@gmail.com";
+		String password = "hello123";
+		filter2 = "2021-07-11";
+		filter3 = "Hong kong";
+		indexForBooking = 5;
+		maxTicketBooking = "3";
+		
+		testCollection.add("End to end positive test case with a different account");
+		result = registerTest(driver, newUserEmail, password, password, fName, lName, index1, sAnswer2, postiveTestcase);
+		RegisterTest = "Register Test new different user (Positive Test Case)  " + result;
+		testCollection.add(RegisterTest);
+		
+		result = loginTest(driver, newUserEmail, password, postiveTestcase);
+		loginTest = "Login Test new different user (Correct Username and Correct password)  " + result;
+		testCollection.add(loginTest);
+		
+		result = logoutTest(driver, postiveTestcase);
+		logoutTest = "Logout Test new different user (Correct Login credentials and logout)  " + result;
+		testCollection.add(logoutTest);
+		
+		result = bookingTest(driver, newUserEmail, password, empty, filter2, filter3, indexForBooking, maxTicketBooking, postiveTestcase);
+		bookingTest = "Booking Test new different user (Correct Booking Test with the correct form fields)  " + result;
+		testCollection.add(bookingTest);
+		
+		result = reservedTest(driver, newUserEmail, password, creditCardNum, indexOfSelect, passportNum, name, postiveTestcase);
+		resevedTest = "Reseved Booking new different user (Correct flow with correct fields)  " + result;
+		testCollection.add(resevedTest); 
+		
+		result = bookingTest(driver, newUserEmail, password, empty, filter2, filter3, indexForBooking, maxTicketBooking, postiveTestcase);
+		result = reservedDeleteTest(driver, newUserEmail, password, indexOfSelect, click, postiveTestcase);
+		reservedDelete = "Reserved Delete new different user (Correct flow with user choice and checkbox click)  " + result;
+		testCollection.add(reservedDelete);
+		
+		result = resetPasswordTest(driver, newUserEmail, sAnswer2, postiveTestcase);
+		resetPassword = "Reset Password new different user (Correct email and password)  " + result;
+		testCollection.add(resetPassword);
+		
+		result = changePasswordTest(driver, newUserEmail, sAnswer2, password, password, postiveTestcase);
+		passwordChange = "Change Password new different user (Correct email and password)  " + result;
+		testCollection.add(passwordChange);
+		
+		
 		driver.quit();
 		//write to result file
 		try 
