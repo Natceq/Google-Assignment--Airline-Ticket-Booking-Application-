@@ -317,13 +317,14 @@ public class Testing
 		testCollection.add(passwordChange);
 		
 		result = changePasswordTest(driver, correctEmail, sAnswer2, newPw, empty, negativeTestcase);
-		passwordChange = "Change Password Test 1 (empty confirm password form field)  " + result;
+		passwordChange = "Change Password Test 2 (empty confirm password form field)  " + result;
 		testCollection.add(passwordChange);
 		
 		result = changePasswordTest(driver, correctEmail, sAnswer2, newPw, newConfirmPW, postiveTestcase);
-		passwordChange = "Change Password Test 1 (Correct email and password)  " + result;
+		passwordChange = "Change Password Test 3 (Correct email and password)  " + result;
 		testCollection.add(passwordChange);
 		
+		driver.quit();
 		//write to result file
 		try 
 		{
