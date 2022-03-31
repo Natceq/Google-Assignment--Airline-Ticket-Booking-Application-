@@ -9,7 +9,7 @@ https://youtu.be/rF-bRSUN6rU
 
 
 ## Requirements
-###Application 
+### Application 
 * Go - https://golang.org/doc/install
 * Revel Go Web Framework - https://github.com/revel
 * MySQL - https://dev.mysql.com/downloads/installer/
