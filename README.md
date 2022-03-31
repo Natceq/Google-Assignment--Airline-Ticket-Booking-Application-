@@ -75,9 +75,9 @@ The directory structure of a generated Revel application:
 * [Help with Ecplise project importing](https://dzone.com/articles/exporting-and-importing)
 
 ## Application demo link 
-https://youtu.be/FswIK0mFv1k
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FswIK0mFv1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Application automated testing link
-https://youtu.be/rF-bRSUN6rU
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rF-bRSUN6rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
