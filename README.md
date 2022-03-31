@@ -9,6 +9,7 @@ https://youtu.be/rF-bRSUN6rU
 
 
 ## Requirements
+# Application 
 * Go - https://golang.org/doc/install
 * Revel Go Web Framework - https://github.com/revel
 * MySQL - https://dev.mysql.com/downloads/installer/
@@ -16,6 +17,8 @@ https://youtu.be/rF-bRSUN6rU
 * Typescript - https://www.typescriptlang.org/download
 * AngularJS - https://angularjs.org/
 * Visual Studio Code (IDE) - https://code.visualstudio.com/download 
+
+# Automation Testing
 * Java JDK 1.8(Included in Ecplise) - https://www.oracle.com/sg/java/technologies/javase/javase-jdk8-downloads.html
 * Ecplise (Running Test Cases) - https://www.eclipse.org/downloads/
 
