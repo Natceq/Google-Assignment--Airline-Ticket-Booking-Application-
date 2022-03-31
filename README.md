@@ -1,6 +1,12 @@
 # Airline Ticket Booking Application
    This project was generated with revel version 1.0.0.
 
+## Application demo link 
+https://youtu.be/FswIK0mFv1k
+
+## Application automated testing link
+https://youtu.be/rF-bRSUN6rU
+
 
 ## Requirements
 * Go - https://golang.org/doc/install
@@ -73,10 +79,3 @@ The directory structure of a generated Revel application:
 * Download Ecplise and import airlinesTest into ecplise
 * Testing file is done with java 1.8
 * [Help with Ecplise project importing](https://dzone.com/articles/exporting-and-importing)
-
-## Application demo link 
-https://youtu.be/FswIK0mFv1k
-
-## Application automated testing link
-https://youtu.be/rF-bRSUN6rU
-
